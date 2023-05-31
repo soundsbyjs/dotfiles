@@ -1,8 +1,2 @@
 Dotfiles for various Linux tools in a simple, symlinkable format.
-Includes:
-    -neovim
-    -oh-my-zsh zshrc
-    -i3
-    -i3 blocks
-    -some others
-with notes on how to install each.
+Have fun. If you don't know what you're doing with these then don't do anything with them?
