@@ -1,4 +1,5 @@
 # Juno's Dotfiles 
+
 Dotfiles and other configs for various Linux tools in a simple, symlinkable format.
 
 Keep them all in once place and symlink them where they go.
