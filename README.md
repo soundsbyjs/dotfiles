@@ -3,7 +3,7 @@ Dotfiles and other configs for various Linux tools in a simple, symlinkable form
 
 Keep them all in once place and symlink them where they go.
 
-# notes:
+# Notes:
 
 <h2> i3 and i3blocks </h2>
 
