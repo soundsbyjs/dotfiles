@@ -44,11 +44,11 @@ call plug#begin()
 " ///////////// essentials ////////////////
 										
 										
-Plug 'preservim/NERDTree'		" NERDTree is a file viewer for NERDS
-					" note this requires python nvim
-					" pip install neovim for that
-Plug 'vim-airline/vim-airline'		" lean and mean status & tabline
-Plug 'nathanaelkane/vim-indent-guides'	" indentation lines..... but doesn't vim have this built in?
+Plug 'preservim/NERDTree'							" NERDTree is a file viewer for NERDS
+													" note this requires python nvim
+													" pip install neovim for that
+Plug 'vim-airline/vim-airline'						" lean and mean status & tabline
+Plug 'nathanaelkane/vim-indent-guides'				" indentation lines..... but doesn't vim have this built in?
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
@@ -56,7 +56,9 @@ Plug 'tpope/vim-fugitive'
 " /////////////   themes   ///////////////
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 	" pwetty colors
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }		" theme
+" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }		" theme
+" have been running this for too long!
+Plug 'romainl/vim-dichromatic'
 Plug 'vim-airline/vim-airline-themes'				" airline theme
 
 
@@ -71,8 +73,7 @@ call plug#end()
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " treesitter
-" 	treesitter is a syntax highlighting doo dad. it's sometimes kind of slow but
-" 	it looks so damn sexy
+" 	treesitter is a syntax highlighting doo dad. it's sometimes kind of slow but it looks so sexy
 lua << EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -84,21 +85,12 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 " theme
-" this theme has a transparent background because I use a full screen terminal
-" called guake. You can disable that by deleting the following lines,
-" but I personally like it so that I can read stuff behind my terminal
-
-let g:tokyonight_transparent = "true"
-let g:tokyonight_style = "night"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-
-colorscheme tokyonight
+colorscheme dichromatic 
 
 " airline
 " the airline theme I chose looks pretty damn  good with tokyonight
 " it's the same color scheme as the AWP asimov from CS:GO >:)
-let g:airline_theme='atomic'
+let g:airline_theme='silver'
 
 " pairs
 let g:AutoPairsFlyMode = 0
