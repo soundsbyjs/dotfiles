@@ -74,3 +74,4 @@ export LANG=en_US.UTF-8
 source $ZSH/oh-my-zsh.sh
 source /home/juno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+source /home/juno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

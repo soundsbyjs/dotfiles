@@ -12,3 +12,4 @@ xinput --set-prop "<your_trackpoint_name>" "Coordinate Transformation Matrix" <x
 
 fec --bg-scale ~/Wallpapers/
 exec i3
+flameshot &
