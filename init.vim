@@ -45,10 +45,8 @@ call plug#begin()
 										
 										
 Plug 'preservim/NERDTree'							" NERDTree is a file viewer for NERDS
-													" note this requires python nvim
-													" pip install neovim for that
+													" note this requires pip install neovim
 Plug 'vim-airline/vim-airline'						" lean and mean status & tabline
-Plug 'nathanaelkane/vim-indent-guides'				" indentation lines..... but doesn't vim have this built in?
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
