@@ -54,8 +54,6 @@ Plug 'tpope/vim-fugitive'
 " /////////////   themes   ///////////////
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 	" pwetty colors
-" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }		" theme
-" have been running this for too long!
 Plug 'romainl/vim-dichromatic'
 Plug 'vim-airline/vim-airline-themes'				" airline theme
 
