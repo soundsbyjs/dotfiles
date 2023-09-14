@@ -31,6 +31,7 @@ set shiftwidth=4	" ^^
 set smartindent		" ^^ but it sounds cool
 let mapleader = ","
 
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -56,6 +57,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 	" pwetty colors
 Plug 'romainl/vim-dichromatic'
 Plug 'vim-airline/vim-airline-themes'				" airline theme
+Plug 'EdenEast/nightfox.nvim'
 
 
 call plug#end()
@@ -81,12 +83,14 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 " theme
-colorscheme dichromatic 
+colorscheme carbonfox 
+" italics
+highlight Comment cterm=italic
 
 " airline
 " the airline theme I chose looks pretty damn  good with tokyonight
 " it's the same color scheme as the AWP asimov from CS:GO >:)
-let g:airline_theme='silver'
+let g:airline_theme='owo'
 
 " pairs
 let g:AutoPairsFlyMode = 0
