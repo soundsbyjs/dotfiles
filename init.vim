@@ -84,7 +84,10 @@ EOF
 
 " theme
 colorscheme carbonfox 
-" italics
+" Enable italics in Neovim (if your terminal supports it)
+if has("nvim")
+  highlight Comment cterm=italic gui=italic
+endif
 highlight Comment cterm=italic
 
 " airline
