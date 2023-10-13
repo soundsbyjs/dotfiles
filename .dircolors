@@ -1,0 +1,26 @@
+# Custom dircolors configuration for Lily
+# This file should be saved as ~/.dircolors and applied with `eval "$(dircolors ~/.dircolors)"`
+
+# Regular files
+NORMAL 00
+
+# Directory
+DIR 01;36
+
+# Symbolic links to directories
+LINK 01;36
+
+# Executable files
+EXEC 01;32
+
+# Archive files (e.g., zip, tar)
+ARCHIVE 01;31
+
+# Media files (e.g., mp3, jpg)
+MEDIA 01;35
+
+# Special files (e.g., devices)
+SPECIAL 01;34
+
+# Root-owned folders
+OTHER_WRITABLE 01;31
