@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
 ZSH=~/.oh-my-zsh
 
@@ -48,6 +50,8 @@ alias cl="clear"
 alias claer="clear"
 alias ls ="lsd"
 
+alias hibernate="sudo systemctl hibernate"
+
 junoclone() {
   local token="<tokenhere>"
   local user="$1"
@@ -72,6 +76,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 source $ZSH/oh-my-zsh.sh
-source /home/juno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /home/juno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# ls colors
+
+source /home/juno/Appdata/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/juno/Appdata/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
