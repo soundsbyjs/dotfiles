@@ -80,4 +80,3 @@ source $ZSH/oh-my-zsh.sh
 # ls colors
 
 source /home/juno/Appdata/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/juno/Appdata/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
