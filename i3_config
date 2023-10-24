@@ -185,8 +185,22 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+exec_always --no-startup-id polybar example
+
 
 default_border pixel 0
+
+# Open terminal on workspace 1
+assign [class="Terminal"] 1: alacritty
+
+# Open browser on workspace 2
+assign [class="Firefox"] 2: firefox
+
+# Open other applications on workspace 4
+assign [class="AppName"] 10: conky
+
+# Launch xfce4-screenshooter with PrintScreen key for region capture
+bindsym Print exec xfce4-screenshooter --region
+# Launch xfce4-screenshooter with Super+PrintScreen for full-screen capture
+bindsym $mod+Print exec xfce4-screenshooter --fullscreen
+
