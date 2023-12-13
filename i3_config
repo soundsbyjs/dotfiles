@@ -200,7 +200,7 @@ assign [class="Firefox"] 2: firefox
 assign [class="AppName"] 10: conky
 
 # Launch xfce4-screenshooter with PrintScreen key for region capture
-bindsym Print exec xfce4-screenshooter --region
+bindsym Print exec flameshot gui
 # Launch xfce4-screenshooter with Super+PrintScreen for full-screen capture
-bindsym $mod+Print exec xfce4-screenshooter --fullscreen
+bindsym $mod+Print exec flameshot full 
 
