@@ -1,10 +1,12 @@
 export TERM="xterm-256color"
 
+export BROWSER=/usr/bin/chromium
+
 # Path to your oh-my-zsh installation.
 ZSH=~/.oh-my-zsh
 
 # theme
-ZSH_THEME="awesomepanda"
+ZSH_THEME="jbergantine"
 
 # Which plugins would you like to load?
 plugins=(
