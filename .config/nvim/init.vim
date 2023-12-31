@@ -40,7 +40,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter' 
 Plug 'yggdroot/indentline'
 Plug 'tpope/vim-commentary'
-Plug 'preservim/nerdtree'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 " aesthetics
 
@@ -48,7 +49,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline-themes'	
 Plug 'EdenEast/nightfox.nvim'
 Plug 'Yggdroot/indentLine'
-Plug 'morhetz/gruvbox'
+
 
 call plug#end()
 
@@ -66,9 +67,7 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 " theme
-colorscheme gruvbox 
-hi Normal guibg=black ctermbg=0
-
+colorscheme carbonfox 
 " Enable italics in Neovim (if your terminal supports it)
 if has("nvim")
   highlight Comment cterm=italic gui=italic
@@ -88,8 +87,12 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = '|'
 let g:indentLine_fileTypeExclude = ['dashboard']
 
-" nerdtree: toggle with ,n
-nnoremap <leader>n :NERDTreeToggle<CR>
+
+" fzf
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.4 } }
+nnoremap <leader>ff :FzfFiles<CR>
+nnoremap <leader>fb :FzfBuffers<CR>
+nnoremap <leader>fh :FzfHelp<CR>
 
 " coc-nvim
 
