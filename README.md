@@ -13,10 +13,6 @@ Requires installation of vim plug, as well as
 
 ```pipipippppip pip install neovim
 ```
-<h2> i3 and i3blocks </h2>
-
-both of these files need to be renamed to "config" when symlinked into their .config folders
-
 <h2> newsboat </h2>
 
 newsboat is an RSS reader. I have some vim bindings configured in .newsboat/config and some cool rss feeds about hacker news and other tech stuff in it. 
