@@ -7,10 +7,10 @@ set tabstop=4
 set ignorecase
 set smartcase
 set relativenumber
-set guicursor=		
+set guicursor=
 set noerrorbells
-set shiftwidth=4	
-set smartindent		
+set shiftwidth=4
+set smartindent
 set nowrap
 let mapleader = "," 	"the best leader
 
@@ -32,19 +32,20 @@ nnoremap <C-H> <C-W><C-H>
 
 call plug#begin()
 
-Plug 'vim-airline/vim-airline'						
+Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter' 
+Plug 'airblade/vim-gitgutter'
 Plug 'yggdroot/indentline'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 
 " aesthetics
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-Plug 'vim-airline/vim-airline-themes'	
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
@@ -69,7 +70,7 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 " theme
-colorscheme evergarden 
+colorscheme evergarden
 
 lua << EOF
 require 'evergarden'.setup {
