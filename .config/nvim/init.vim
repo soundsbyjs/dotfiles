@@ -1,5 +1,3 @@
-" personal prefs
-
 set nocompatible
 filetype on
 filetype plugin on
@@ -13,6 +11,7 @@ set guicursor=
 set noerrorbells
 set shiftwidth=4	
 set smartindent		
+set nowrap
 let mapleader = "," 	"the best leader
 
 " splits
@@ -49,6 +48,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
+Plug 'rose-pine/neovim'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'crispybaccoon/evergarden'
 
 call plug#end()
 
@@ -66,7 +69,24 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 " theme
-colorscheme gruvbox 
+colorscheme evergarden 
+
+lua << EOF
+require 'evergarden'.setup {
+  transparent_background = true,
+  contrast_dark = 'hard',  -- hard'|'medium'|'soft'
+  override_terminal = true,
+  style = {
+    tabline = { reverse = true, color = 'green' },
+    search = { reverse = false, inc_reverse = true },
+    types = { italic = true },
+    keyword = { italic = false },
+    comment = { italic = true },
+  },
+  overrides = { }, -- add custom overrides
+}
+EOF
+
 hi Normal guibg=black ctermbg=0
 
 " Enable italics in Neovim (if your terminal supports it)
@@ -74,9 +94,8 @@ if has("nvim")
   highlight Comment cterm=italic gui=italic
 endif
 highlight Comment cterm=italic
-
 " airline
-let g:airline_theme='owo'
+let g:airline_theme='seagull'
 
 " pairs
 let g:AutoPairsFlyMode = 0
@@ -227,7 +246,6 @@ command! -nargs=0 Format :call CocActionAsync('format')
 
 " Add `:Fold` command to fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
 " Add `:OR` command for organize imports of the current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 

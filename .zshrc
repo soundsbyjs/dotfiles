@@ -50,7 +50,7 @@ alias projucer='Projucer'
 alias cs='mcs -out:$1.exe $1;mono $1.exe'
 alias cl="clear"
 alias claer="clear"
-alias ls ="lsd"
+alias ls='lsd'
 
 alias hibernate="sudo systemctl hibernate"
 
