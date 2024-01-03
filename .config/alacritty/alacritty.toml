@@ -5,17 +5,17 @@ background = "#000000"
 size = 11.5
 
 [font.bold]
-family = "Hack"
+family = "HackNerdFontMono"
 style = "Bold"
 
 [font.bold_italic]
-family = "Hack"
+family = "HackNerdFontMono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Hack"
+family = "HackNerdFontMono"
 style = "Italic"
 
 [font.normal]
-family = "Hack"
+family = "HackNerdFontMono"
 style = "Regular"
