@@ -22,9 +22,6 @@ https://www.us-cert.gov/ncas/alerts.xml
 https://www.us-cert.gov/ncas/current-activity.xml
 https://www.us-cert.gov/ncas/bulletins.xml
 https://www.us-cert.gov/ncas/analysis-reports.xml
-http://vince.us-east-1.elasticbeanstalk.com/vuls/atomfeed
-https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml
-https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml
 https://seclists.org/rss/fulldisclosure.rss
 https://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches
 https://www.exploit-db.com/rss.xml
