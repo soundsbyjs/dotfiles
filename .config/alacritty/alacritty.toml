@@ -19,3 +19,6 @@ style = "Italic"
 [font.normal]
 family = "HackNerdFontMono"
 style = "Regular"
+
+[scrolling]
+history = 100000
