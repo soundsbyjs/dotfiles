@@ -25,6 +25,8 @@ plugins=(
 # 1. disable the cursor style cuz the beam cursor is ugly
 ZVM_CURSOR_STYLE_ENABLED=false
 
+export LS_COLORS='di=1;35:ln=1;36:so=1;33:pi=40;33:ex=1;32:bd=40;33;01:cd=40;33;01:su=1;31:sg=1;31:tw=1;34:ow=1;34:'
+
 # aliases
 alias updatezsh='source ~/.zshrc'
 alias bk="cd .."
@@ -51,6 +53,10 @@ alias cs='mcs -out:$1.exe $1;mono $1.exe'
 alias cl="clear"
 alias claer="clear"
 alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 alias hibernate="sudo systemctl hibernate"
 
