@@ -28,6 +28,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" terminal doesn't have line numbers
+autocmd TermOpen * setlocal nonumber norelativenumber
+
+
 " plugins
 
 call plug#begin()
@@ -102,6 +106,12 @@ let g:airline_theme='seagull'
 let g:AutoPairsFlyMode = 0
 " make auto pairs work better
 let g:AutoPairsMultilineClose = 0
+" disable autopairs in md files and txt files
+lua << EOF
+vim.cmd([[
+  autocmd FileType markdown let b:jiang_disabled = 1
+]])
+EOF
 
 " indentlines
 let g:indentLine_enabled = 1
