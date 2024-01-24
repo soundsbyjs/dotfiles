@@ -1,3 +1,5 @@
+# security/hacker stuff
+
 https://feeds.feedburner.com/TheHackersNews
 https://news.ycombinator.com/rss
 https://lobste.rs/rss
@@ -5,22 +7,31 @@ http://feeds.arstechnica.com/arstechnica/technology-lab
 http://rss.slashdot.org/Slashdot/slashdot
 https://www.theregister.com/headlines.atom
 https://www.technologyreview.com/stories.rss
-https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml
+http://feeds.feedburner.com/gbhackers?format=xml
+https://www.bleepingcomputer.com/feed/
 https://news.mit.edu/rss/topic/security-studies
-https://news.mit.edu/rss/topic/economics
-https://news.mit.edu/rss/research
 https://feed.infoq.com/
 https://krebsonsecurity.com/feed/
 https://dev.to/feed
 https://blog.malwarebytes.com/feed/
 https://www.wired.com/feed/category/security/latest/rss
-http://feeds.feedburner.com/gbhackers?format=xml
-https://www.bleepingcomputer.com/feed/
 http://securityaffairs.co/wordpress/rss
 https://threatpost.com/feed
 https://www.theregister.co.uk/security/headlines.atom
 https://www.securitymagazine.com/rss/15
 https://msrc-blog.microsoft.com/feed/
+
+# linux
+https://www.linux.com/feed/
+https://lwn.net/headlines/rss
+
+# science
+https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml
+https://news.mit.edu/rss/topic/economics
+https://news.mit.edu/rss/research
+https://news.mit.edu/rss/topic/science-technology-and-society
+
+
 https://googleprojectzero.blogspot.com/feeds/posts/default
 https://www.us-cert.gov/ncas/alerts.xml
 https://www.us-cert.gov/ncas/current-activity.xml
@@ -43,6 +54,4 @@ https://www.zdnet.com/news/rss.xml
 https://gizmodo.com/rss
 https://venturebeat.com/feed/
 http://www.phoronix.com/rss.php
-https://www.linux.com/feed/
-https://lwn.net/headlines/rss
 
