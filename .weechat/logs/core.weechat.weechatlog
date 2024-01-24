@@ -1,0 +1,11 @@
+2024-01-24 16:09:51		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, typing, xfer
+2024-01-24 16:10:29		fifo: pipe closed
+2024-01-24 16:10:35		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, typing, xfer
+2024-01-24 16:10:41	=!=	Unknown command "theme" (type /help for help), commands with similar name: t, me, m, time
+2024-01-24 16:10:43	=!=	Error with command "/script enable theme" (help on command: /help script)
+2024-01-24 16:10:49	=!=	script: download of scripts is disabled by default; see /help script.scripts.download_enabled
+2024-01-24 16:11:02		fifo: pipe closed
+2024-01-24 16:11:14		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, typing, xfer
+2024-01-24 16:11:21	=!=	irc: unable to add temporary server "libera" because the addition of temporary servers with command /connect is currently disabled
+2024-01-24 16:11:21	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2024-01-24 16:11:24		fifo: pipe closed
