@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
-
 export BROWSER=/usr/bin/chromium
+export EDITOR='nvim'
 
 # Path to your oh-my-zsh installation.
 ZSH=~/.oh-my-zsh
