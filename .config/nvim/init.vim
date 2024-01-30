@@ -36,7 +36,7 @@ autocmd TermOpen * setlocal nonumber norelativenumber
 
 call plug#begin()
 
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
@@ -56,6 +56,9 @@ Plug 'nvim-tree/nvim-web-devicons'
 " Plug 'Mofiqul/dracula.nvim'
 " Plug 'hriskempson/vim-tomorrow-theme'
 Plug 'JoshPorterDev/nvim-base16'
+Plug 'ryanoasis/vim-devicons' " for icons
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " optional syntax highlighting
+Plug 'Xuyuanp/nerdtree-git-plugin' " optional Git integration
 Plug 'EdenEast/nightfox.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
@@ -66,10 +69,35 @@ Plug 'crispybaccoon/evergarden'
 
 call plug#end()
 
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:DevIconsEnableFolderExtensionPattern = '\v^(node_modules|__pycache__|target|\.git)$'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionPattern = '\v.(js|jsx|ts|tsx)$'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionPattern = '\v.(css|sass|scss|less|styl)$'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionPattern = '\v.(html|htm)$'
+
+" Set NERDTree theme (you can replace 'wombat' with any other theme you prefer)
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeWinSize = 25
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+            \ "Modified"  : "✹",
+            \ "Staged"    : "✚",
+            \ "Untracked" : "✭",
+            \ "Renamed"   : "➜",
+            \ "Unmerged"  : "═",
+            \ "Deleted"   : "✖",
+            \ "Dirty"     : "✗",
+            \ "Clean"     : "✔",
+            \ 'Ignored'   : '☒',
+            \ "Unknown"   : "?"
+            \ }
+
+
 " plugin prefs
 
 " treesitter
 hi Normal guibg=NONE ctermbg=NONE
+
 lua << EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -82,9 +110,11 @@ EOF
 
 " theme
 
-colorscheme base16-ocean
+colorscheme base16-tomorrow-night
+highlight Normal guibg=#000000 ctermbg=0
 
-hi Normal guibg=NONE ctermbg=NONE
+
+" hi Normal guibg=NONE ctermbg=NONE
 
 " hi Normal guibg=NONE ctermbg=NONE
 " hi LineNr guifg=NONE ctermfg=NONE
