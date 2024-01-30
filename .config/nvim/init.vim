@@ -48,8 +48,14 @@ Plug 'preservim/nerdtree'
 " aesthetics
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+" too many themes! will clean later
+" Plug 'Mofiqul/dracula.nvim'
+" Plug 'hriskempson/vim-tomorrow-theme'
+Plug 'JoshPorterDev/nvim-base16'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
@@ -63,6 +69,7 @@ call plug#end()
 " plugin prefs
 
 " treesitter
+hi Normal guibg=NONE ctermbg=NONE
 lua << EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -74,44 +81,71 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 " theme
-colorscheme evergarden
 
-lua << EOF
-require 'evergarden'.setup {
-  transparent_background = true,
-  contrast_dark = 'hard',  -- hard'|'medium'|'soft'
-  override_terminal = true,
-  style = {
-    tabline = { reverse = true, color = 'green' },
-    search = { reverse = false, inc_reverse = true },
-    types = { italic = true },
-    keyword = { italic = false },
-    comment = { italic = true },
-  },
-  overrides = { }, -- add custom overrides
-}
-EOF
+colorscheme base16-ocean
 
-hi Normal guibg=black ctermbg=0
+hi Normal guibg=NONE ctermbg=NONE
+
+" hi Normal guibg=NONE ctermbg=NONE
+" hi LineNr guifg=NONE ctermfg=NONE
+" set winblend=10
+
 
 " Enable italics in Neovim (if your terminal supports it)
 if has("nvim")
   highlight Comment cterm=italic gui=italic
 endif
 highlight Comment cterm=italic
-" airline
-let g:airline_theme='seagull'
+
+" lualine 
+lua << END
+	require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+}
+END
 
 " pairs
 let g:AutoPairsFlyMode = 0
 " make auto pairs work better
 let g:AutoPairsMultilineClose = 0
 " disable autopairs in md files and txt files
-lua << EOF
-vim.cmd([[
-  autocmd FileType markdown let b:jiang_disabled = 1
-]])
-EOF
 
 " indentlines
 let g:indentLine_enabled = 1
