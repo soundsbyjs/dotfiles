@@ -17,6 +17,7 @@ plugins=(
     dirhistory              # press alt + <- or -> to navigate cd stack 
     colored-man-pages
 	archlinux
+	tmux
 )
 
 # ###Plugin configs### #
