@@ -1,23 +1,23 @@
 export TERM="xterm-256color"
-export BROWSER=/usr/bin/chromium
+export BROWSER=/usr/bin/librewolf
 export EDITOR='nvim'
+export MANPAGER='nvim +Man!'
 
 # Path to your oh-my-zsh installation.
 ZSH=~/.oh-my-zsh
 
 # theme
-ZSH_THEME="jbergantine"
+ZSH_THEME="cloud"
 
 # Which plugins would you like to load?
 plugins=(
     git                     # shows stuff related to github
-	github
-    zsh-autosuggestions     # press end to autocomplete recent/frequent commands
+    github
     vi-mode                 # somewhat useful
     dirhistory              # press alt + <- or -> to navigate cd stack 
     colored-man-pages
-	archlinux
-	tmux
+    archlinux
+    # tmux
 )
 
 # ###Plugin configs### #
@@ -88,4 +88,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ls colors
 
-source /home/juno/Appdata/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+
