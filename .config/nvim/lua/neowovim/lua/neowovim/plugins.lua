@@ -6,7 +6,7 @@ vim.call('plug#begin')
 -- Essentials --
 Plug('jiangmiao/auto-pairs')
 Plug('tpope/vim-fugitive')
-Plug ('f-person/git-blame.nvim')
+Plug('airblade/vim-gitgutter')
 Plug('tpope/vim-commentary')
 Plug('preservim/nerdtree')
 Plug('neovim/nvim-lspconfig')
