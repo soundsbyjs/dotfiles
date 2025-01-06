@@ -1,7 +1,7 @@
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
 require('lualine').setup {
   options = {
-    icons_enabled = true,
-    theme = 'onedark'
+    theme = 'seoul256', -- Choose a theme or leave it as default
+    section_separators = '',
+    component_separators = ''
+  }
+}
