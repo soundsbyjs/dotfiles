@@ -2,8 +2,45 @@
 -- iirc neovim has a way to only execute vimscript parts for certain filetypes
 -- so that's funky and cool!
 
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.ccls.setup{}
+local lspconfig = require('lspconfig')
+lspconfig.pyright.setup{}
+lspconfig.clangd.setup{
+    capabilities = capabilities
+}
+
+lspconfig.texlab.setup {
+  cmd = { "texlab" },
+  filetypes = { "tex", "bib" },
+  root_dir = function(filename)
+    return util.path.dirname(filename)
+  end,
+  settings = {
+    texlab = {
+      auxDirectory = ".",
+      bibtexFormatter = "texlab",
+      build = {
+        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+        executable = "latexmk",
+        forwardSearchAfter = false,
+        onSave = false
+      },
+      chktex = {
+        onEdit = false,
+        onOpenAndSave = false
+      },
+      diagnosticsDelay = 300,
+      formatterLineLength = 80,
+      forwardSearch = {
+        args = {}
+      },
+      latexFormatter = "latexindent",
+      latexindent = {
+        modifyLineBreaks = false
+      },
+    },
+  },
+}
+
 
 vim.api.nvim_set_keymap('n','gD',[[:lua vim.lsp.buf.declaration()<cr>]],{})
 vim.api.nvim_set_keymap('n','gd',[[:lua vim.lsp.buf.definition()<cr>]],{})
@@ -27,7 +64,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,

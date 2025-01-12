@@ -22,4 +22,4 @@ require("neowovim.PluginConfigs.init")
 -- lsp stuff
 require("neowovim.lsp-config")
 
-vim.cmd("colorscheme base16-uwunicorn")
+vim.cmd("colorscheme base16-bright")
