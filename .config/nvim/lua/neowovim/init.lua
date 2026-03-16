@@ -22,4 +22,39 @@ require("neowovim.PluginConfigs.init")
 -- lsp stuff
 require("neowovim.lsp-config")
 
-vim.cmd("colorscheme base16-bright")
+-- theme
+require("laserwave").setup({
+  flavor = "original", -- "original" | "hi_c"
+  -- possible modes: "lsp" (semantic highlights) | "treesitter" (no semantic highlights) | "vim" (builtins only)
+  syntax_mode = "lsp",
+  transparent = true,
+  terminal_colors = true,
+  italic_comments = true,
+  italic_keywords = true,
+  italic_functions = false,
+  italic_variables = false,
+  plugins = {
+    blink = true,
+    cmp = false,
+    git = true,
+    mini_pick = true,
+    neotree = false,
+    obsidian = true,
+    occurrence = true,
+    package_info = false,
+    snacks = true,
+    space = true,
+    telescope = true,
+  },
+})
+
+vim.api.nvim_command([[
+    augroup ChangeBackgroudColour
+        autocmd colorscheme * :hi normal guibg=#0a0a0a
+    augroup END
+]])
+vim.o.termguicolors = true
+
+vim.cmd("colorscheme laserwave-hi_c")
+
+

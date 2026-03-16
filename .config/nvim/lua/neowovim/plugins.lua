@@ -1,6 +1,7 @@
 local vim = vim
 local Plug = vim.fn['plug#']
 
+
 vim.call('plug#begin')
 
 -- Essentials --
@@ -39,9 +40,11 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('JoshPorterDev/nvim-base16')
+Plug('lettertwo/laserwave.nvim')
 Plug('ryanoasis/vim-devicons')
 Plug('tiagofumo/vim-nerdtree-syntax-highlight') 
 Plug('Xuyuanp/nerdtree-git-plugin') 
 Plug('Yggdroot/indentLine')
 
 vim.call('plug#end')
+

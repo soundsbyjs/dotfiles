@@ -1,47 +1,3 @@
--- as this grows, I'll make each lang into its own directory
--- iirc neovim has a way to only execute vimscript parts for certain filetypes
--- so that's funky and cool!
-
-local lspconfig = require('lspconfig')
-lspconfig.pyright.setup{}
-lspconfig.clangd.setup{
-    capabilities = capabilities
-}
-
-lspconfig.texlab.setup {
-  cmd = { "texlab" },
-  filetypes = { "tex", "bib" },
-  root_dir = function(filename)
-    return util.path.dirname(filename)
-  end,
-  settings = {
-    texlab = {
-      auxDirectory = ".",
-      bibtexFormatter = "texlab",
-      build = {
-        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
-        executable = "latexmk",
-        forwardSearchAfter = false,
-        onSave = false
-      },
-      chktex = {
-        onEdit = false,
-        onOpenAndSave = false
-      },
-      diagnosticsDelay = 300,
-      formatterLineLength = 80,
-      forwardSearch = {
-        args = {}
-      },
-      latexFormatter = "latexindent",
-      latexindent = {
-        modifyLineBreaks = false
-      },
-    },
-  },
-}
-
-
 vim.api.nvim_set_keymap('n','gD',[[:lua vim.lsp.buf.declaration()<cr>]],{})
 vim.api.nvim_set_keymap('n','gd',[[:lua vim.lsp.buf.definition()<cr>]],{})
 vim.api.nvim_set_keymap('n','<Leader>K',[[:lua vim.lsp.buf.hover()<cr>]],{})
@@ -61,20 +17,6 @@ vim.api.nvim_set_keymap('n','<Leader>oc',[[:lua vim.lsp.buf.outgoing_calls()<cr>
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local lspconfig = require('lspconfig')
-
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls' }
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    -- on_attach = my_custom_on_attach,
-    capabilities = capabilities,
-  }
-end
-
--- luasnip setup
-local luasnip = require 'luasnip'
-
 -- nvim-cmp setup
 local cmp = require'cmp'
 cmp.setup({
@@ -90,8 +32,8 @@ cmp.setup({
     -- Add tab support
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     ['<Tab>'] = cmp.mapping.select_next_item(),
-    ['<C-S-f>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-k>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-j>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
@@ -127,7 +69,6 @@ cmp.setup({
       end,
   },
 })
-
 
 -- Mason Setup
 -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
